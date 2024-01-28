@@ -20,6 +20,6 @@ app.get("/mi-ip-connect", (req,res)=>{
 })
 
 
-app.listen(3000, ()=>{
+app.listen(80, ()=>{
     console.log("server started")
 })
