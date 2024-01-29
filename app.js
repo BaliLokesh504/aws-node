@@ -19,6 +19,19 @@ app.get("/mi-ip-connect", (req,res)=>{
     }
 })
 
+app.get("/", (req,res)=>{
+    try {
+
+        res.send({
+            msg : "i am okay"
+        })
+        
+    } catch (error) {
+        res.send({
+            msg: "not okay"
+        })
+    }
+})
 
 app.listen(3000, ()=>{
     console.log("server started")
