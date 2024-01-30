@@ -19,7 +19,7 @@ app.get("/mi-ip-connect", (req,res)=>{
     }
 })
 
-app.get("/", (req,res)=>{
+app.get("/health", (req,res)=>{
     try {
 
         res.send({
@@ -29,6 +29,21 @@ app.get("/", (req,res)=>{
     } catch (error) {
         res.send({
             msg: "not okay"
+        })
+    }
+})
+
+
+app.get("/", (req,res)=>{
+    try {
+
+        res.send({
+            msg : "heyyy i am only from 4000"
+        })
+        
+    } catch (error) {
+        res.send({
+            msg: "i am not able to proceed"
         })
     }
 })
