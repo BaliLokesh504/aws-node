@@ -6,7 +6,7 @@ app.get("/mi-ip-connect", (req,res)=>{
 
     try {
 
-        console.log(req.headers)
+        console.log("<<<<<<<<<<<I AM ROUTER>>>>>>>>>>>",req.headers)
 
         res.send({
             msg : "Heyyy how are u buddy"
@@ -22,6 +22,9 @@ app.get("/mi-ip-connect", (req,res)=>{
 app.get("/health", (req,res)=>{
     try {
 
+        console.log("<<<<<<<<<<<I AM HEATH CHECKUP>>>>>>>>>>>", req.headers)
+
+
         res.send({
             msg : "i am okay"
         })
@@ -36,6 +39,8 @@ app.get("/health", (req,res)=>{
 
 app.get("/", (req,res)=>{
     try {
+
+        console.log("<<<<<<<<<<<I AM FROM INSTANCE B>>>>>>>>>>>", req.headers)
 
         res.send({
             msg : "heyyy i am only from 4000"
