@@ -6,7 +6,7 @@ app.get("/mi-ip-connect", (req,res)=>{
 
     try {
 
-        console.log("<<<<<<<<<<<I AM ROUTER>>>>>>>>>>>",req.headers)
+        console.log("<<<<<<<<<<<I AM ROUTER>>>>>>>>>>>",req.headers, req.headers['x-real-ip'])
 
         res.send({
             msg : "Heyyy how are u buddy"
@@ -22,7 +22,7 @@ app.get("/mi-ip-connect", (req,res)=>{
 app.get("/health", (req,res)=>{
     try {
 
-        console.log("<<<<<<<<<<<I AM HEATH CHECKUP>>>>>>>>>>>", req.headers)
+        console.log("<<<<<<<<<<<I AM HEATH CHECKUP>>>>>>>>>>>", req.header, req.headers['x-real-ip'])
 
 
         res.send({
@@ -40,7 +40,7 @@ app.get("/health", (req,res)=>{
 app.get("/", (req,res)=>{
     try {
 
-        console.log("<<<<<<<<<<<I AM FROM INSTANCE B>>>>>>>>>>>", req.headers)
+        console.log("<<<<<<<<<<<I AM FROM INSTANCE B>>>>>>>>>>>", req.headers, req.headers['x-real-ip'])
 
         res.send({
             msg : "heyyy i am only from 4000"
